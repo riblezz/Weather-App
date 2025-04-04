@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Day</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- <header>
+        <nav>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </nav>
+    </header> -->
+
+    <main>
+        <div class="first-card card">
+            <div class="input-group">
+                <input type="text" id="userLocation" placeholder="Search for places">
+
+                <select class="converter" id="converter">
+                    <option value="">°C</option>
+                    <option value="">°F</option>
+                </select>
+
+                <img src="./icons/icons8-search.svg" class="search" alt="Search" onclick="findUserLocation(5)">
+            </div>
+
+            <div class="city-now-group">
+                
+                <h2 class="current-city-text">Current city:</h2>
+
+                <div class="city-and-fever-group">
+                    <div class="city-and-country-group">
+                        <p class="city-name">City</p>
+                        <p class="country-name">Country</p>
+                    </div>
+    
+                    <div class="fever-group">
+                        <p class="fever">0</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="popular-city-group">
+
+                <h2 class="popular-city-text">Popular city:</h2>
+
+                <div class="list-popular-city">
+                    <div class="city-and-fever-group">
+                        <div class="city-and-country-group">
+                            <p class="city-name">City</p>
+                            <p class="country-name">Country</p>
+                        </div>
+    
+                        <div class="fever-group">
+                            <p class="fever">0</p>
+                        </div>
+                    </div>
+    
+                    <div class="city-and-fever-group">
+                        <div class="city-and-country-group">
+                            <p class="city-name">City</p>
+                            <p class="country-name">Country</p>
+                        </div>
+    
+                        <div class="fever-group">
+                            <p class="fever">0</p>
+                        </div>
+                    </div>
+    
+                    <div class="city-and-fever-group">
+                        <div class="city-and-country-group">
+                            <p class="city-name">City</p>
+                            <p class="country-name">Country</p>
+                        </div>
+    
+                        <div class="fever-group">
+                            <p class="fever">0</p>
+                        </div>
+                    </div>
+    
+                    <div class="city-and-fever-group">
+                        <div class="city-and-country-group">
+                            <p class="city-name">City</p>
+                            <p class="country-name">Country</p>
+                        </div>
+    
+                        <div class="fever-group">
+                            <p class="fever">0</p>
+                        </div>
+                    </div>
+    
+                    <div class="city-and-fever-group">
+                        <div class="city-and-country-group">
+                            <p class="city-name">City</p>
+                            <p class="country-name">Country</p>
+                        </div>
+    
+                        <div class="fever-group">
+                            <p class="fever">0</p>
+                        </div>
+                    </div>
+
+                    <div class="city-and-fever-group">
+                        <div class="city-and-country-group">
+                            <p class="city-name">City</p>
+                            <p class="country-name">Country</p>
+                        </div>
+    
+                        <div class="fever-group">
+                            <p class="fever">0</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="second-card card">
+            <div class="info-about-city-country-fever">
+                <img src="./icons/reshot-icon-sunshine-2RDM6EVJ8Y.svg" class="weather-icon" alt="sun">
+                <h1 class="city-text" id="cityText">City</h1>
+                <h2 class="country-text" id="countryText">Country</h2>
+                <h3 class="fever-text" id="feverText">0</h3>
+            </div>
+
+            <div class="info-about-tomorrow-and-five-days">
+                <div class="button button-tomorrow">
+                    <p class="tomorrow-text">Forecast for tomorrow</p>
+                </div>
+                
+                <div class="button button-five-days">
+                    <p class="five-days-text">5 day forecast</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="third-card card">
+
+        </div>
+        
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
