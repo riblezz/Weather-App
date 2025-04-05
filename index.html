@@ -5,23 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Day</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- <header>
-        <nav>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </nav>
-    </header> -->
-
     <main>
         <div class="first-card card">
             <div class="input-group">
@@ -32,21 +17,21 @@
                     <option value="">°F</option>
                 </select>
 
-                <img src="./icons/icons8-search.svg" class="search" alt="Search" onclick="findUserLocation(5)">
+                <img src="./icons/icons8-search.svg" class="search" alt="Search">
             </div>
 
             <div class="city-now-group">
                 
                 <h2 class="current-city-text">Current city:</h2>
 
-                <div class="city-and-fever-group">
+                <div class="city-and-fever-group-list left-cards">
                     <div class="city-and-country-group">
-                        <p class="city-name">City</p>
-                        <p class="country-name">Country</p>
+                        <p class="city-name" id="leftCityText">City</p>
+                        <p class="country-name" id="leftCountryText">Country</p>
                     </div>
     
                     <div class="fever-group">
-                        <p class="fever">0</p>
+                        <p class="fever" id="leftFeverText">0</p>
                     </div>
                 </div>
 
@@ -57,69 +42,47 @@
                 <h2 class="popular-city-text">Popular city:</h2>
 
                 <div class="list-popular-city">
-                    <div class="city-and-fever-group">
+                    <div class="city-and-fever-group-list left-cards">
                         <div class="city-and-country-group">
-                            <p class="city-name">City</p>
-                            <p class="country-name">Country</p>
+                            <p class="city-name tokyo">Tokyo</p>
+                            <p class="country-name japan">Japan</p>
                         </div>
     
                         <div class="fever-group">
-                            <p class="fever">0</p>
+                            <p class="fever left-fever1">0</p>
                         </div>
                     </div>
     
-                    <div class="city-and-fever-group">
+                    <div class="city-and-fever-group-list left-cards">
                         <div class="city-and-country-group">
-                            <p class="city-name">City</p>
-                            <p class="country-name">Country</p>
+                            <p class="city-name">Dubai</p>
+                            <p class="country-name">UAE</p>
                         </div>
     
                         <div class="fever-group">
-                            <p class="fever">0</p>
+                            <p class="fever left-fever2">0</p>
                         </div>
                     </div>
     
-                    <div class="city-and-fever-group">
+                    <div class="city-and-fever-group-list left-cards">
                         <div class="city-and-country-group">
-                            <p class="city-name">City</p>
-                            <p class="country-name">Country</p>
+                            <p class="city-name">Paris</p>
+                            <p class="country-name">France</p>
                         </div>
     
                         <div class="fever-group">
-                            <p class="fever">0</p>
+                            <p class="fever left-fever3">0</p>
                         </div>
                     </div>
     
-                    <div class="city-and-fever-group">
+                    <div class="city-and-fever-group-list left-cards">
                         <div class="city-and-country-group">
-                            <p class="city-name">City</p>
-                            <p class="country-name">Country</p>
+                            <p class="city-name">Bali</p>
+                            <p class="country-name">Indonesia</p>
                         </div>
     
                         <div class="fever-group">
-                            <p class="fever">0</p>
-                        </div>
-                    </div>
-    
-                    <div class="city-and-fever-group">
-                        <div class="city-and-country-group">
-                            <p class="city-name">City</p>
-                            <p class="country-name">Country</p>
-                        </div>
-    
-                        <div class="fever-group">
-                            <p class="fever">0</p>
-                        </div>
-                    </div>
-
-                    <div class="city-and-fever-group">
-                        <div class="city-and-country-group">
-                            <p class="city-name">City</p>
-                            <p class="country-name">Country</p>
-                        </div>
-    
-                        <div class="fever-group">
-                            <p class="fever">0</p>
+                            <p class="fever left-fever4">0</p>
                         </div>
                     </div>
 
