@@ -1,16 +1,21 @@
 WEATHER_API_ENDPOINT = "http://api.weatherapi.com/v1/forecast.json?days=5&key=927baf2d296442549b3122200250304&q=";
-LOCATION_API = "http://api.weatherapi.com/v1/ip.json?days=5&key=927baf2d296442549b3122200250304&q=";
-
+LOCATION_API = "http://api.weatherapi.com/v1/ip.json?key=927baf2d296442549b3122200250304&q=";
 
 
 const cities = [
-    {name: "Tokyo", selector: ".left-fever1"},
-    {name: "Dubai", selector: ".left-fever2"},
-    {name: "Paris", selector: ".left-fever3"},
-    {name: "Bali", selector: ".left-fever4"}
+    {name: "Tokyo", selector: ".left-temperature1"},
+    {name: "Dubai", selector: ".left-temperature2"},
+    {name: "Paris", selector: ".left-temperature3"},
+    {name: "Bali", selector: ".left-temperature4"}
 ]
 
+navigator.geolocation.getCurrentPosition(function(position) {
+    const lat = position.coords.latitude;
+    const lon = position.coords.longitude;
 
+    const locationQuery = `${lat},${lon}`;
+    findUserLocation(locationQuery);
+});
 
 function fetchTemperature(city, selector) {
     fetch(WEATHER_API_ENDPOINT + city)
@@ -55,8 +60,8 @@ function findUserLocation(city) {
         document.getElementById("leftCityText").textContent = name;
         document.getElementById("countryText").textContent = country;
         document.getElementById("leftCountryText").textContent = country;
-        document.getElementById("feverText").textContent = temperature + "°C";
-        document.getElementById("leftFeverText").textContent = temperature + "°C";
+        document.getElementById("temperatureText").textContent = temperature + "°C";
+        document.getElementById("leftTemperatureText").textContent = temperature + "°C";
         document.querySelector(".weather-icon").src = weatherIcon;
         document.querySelector(".feelslike-c-text").textContent = feelslikeC;
         document.querySelector(".winds-kph-text").textContent = wind;
@@ -83,7 +88,7 @@ document.getElementById("userLocation").addEventListener("keypress", function(e)
     }
 })
 
-document.querySelectorAll(".city-and-fever-group-list").forEach(cityElement => {
+document.querySelectorAll(".city-and-temperature-group-list").forEach(cityElement => {
     cityElement.addEventListener("click", function() {
         const city = this.querySelector(".city-name").textContent;
         findUserLocation(city)
@@ -98,4 +103,3 @@ function updateAllTemperatures() {
 updateAllTemperatures();
 
 setInterval(updateAllTemperatures, 100000);
-
